@@ -4,3 +4,12 @@ server:
 logging:
   pattern:
     console: '%d{yyyy-MM-dd HH:mm:ss.SSS} %clr(%5p) %clr([%-40.40logger{39}]){cyan} %4L - %m%n'
+
+spring:
+  cloud:
+      discovery:
+        client:
+          simple:
+            instances:
+              first:
+                - uri: http://localhost:9999/first
